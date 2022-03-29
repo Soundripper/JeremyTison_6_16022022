@@ -15,7 +15,7 @@ function photographerFactory(data) {
 
         // ajout link to photographer page
         article.appendChild(a);
-        a.href = "photographer.html";
+        a.href = "photographer.html?Id=" + id;
         a.appendChild(img);
         a.appendChild(h2);
 
