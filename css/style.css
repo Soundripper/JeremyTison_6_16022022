@@ -71,6 +71,14 @@ h1 {
     object-fit: cover;
     border-radius: 100%;
 }
-.photographer_section article:hover {
-    cursor: pointer;
+
+/* link to photographer page */
+a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
 }
+/* .photographer_section article:hover {
+    cursor: pointer;
+} */
