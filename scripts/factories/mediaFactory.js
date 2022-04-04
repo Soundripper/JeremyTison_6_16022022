@@ -6,15 +6,22 @@ function mediaFactory(data){
     const gallery = document.querySelector('.photograph-galery');
     
     data.forEach(media => {
+        
         console.log(media.image);
         const imageCard = document.createElement('div');
         imageCard.className="imageCard";
         gallery.appendChild(imageCard);
         
-        const imageDiv = document.createElement('img');
-        imageDiv.setAttribute("src", `assets/photosTotal/${media.image}`); 
-        imageCard.appendChild(imageDiv);
-
+        if (media.hasOwnProperty("image")){
+            const imageDiv = document.createElement('img');
+            imageDiv.setAttribute("src", `assets/photosTotal/${media.image}`); 
+            imageCard.appendChild(imageDiv);
+        }else if(media.hasOwnProperty("video")){
+            const imageDiv = document.createElement('video');
+            imageDiv.setAttribute("src", `assets/photosTotal/${media.video}`); 
+            imageCard.appendChild(imageDiv);
+        }
+        
         const imageTitle = document.createElement('h4');
         imageTitle.className="imageTitle";
         imageTitle.textContent = media.title;

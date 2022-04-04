@@ -137,11 +137,11 @@ a{
 .imageCard{
     display : flex;
     flex-direction: column;
-    margin : 30px;
+    margin : 0 30px 10px 30px;
 }
-.imageCard img{
-    width : 200px;
-    height : 200px;
+.imageCard img, .imageCard video {
+    width : 300px;
+    height : 300px;
     object-fit:cover;
     border-radius: 10px;
 }
@@ -149,7 +149,7 @@ a{
 .imageTitle {
     color: #901C1C;
     font-size: 15px;
-    margin: 10px;
+    margin-top : 8px;
 }
 
 .price{
