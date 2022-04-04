@@ -131,17 +131,33 @@ a{
     padding : 50px;
     display : flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .imageCard{
     display : flex;
     flex-direction: column;
-    height:100%;
     margin : 30px;
 }
 .imageCard img{
     width : 200px;
     height : 200px;
     object-fit:cover;
-    border-radius: 10px;;
+    border-radius: 10px;
+}
+
+.imageTitle {
+    color: #901C1C;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.price{
+    background-color:#D3573C;
+    margin-right: 20px;
+    padding : 10px;
+    position : fixed;
+    bottom: -23px;
+    right : 0;
+    border-radius: 3px;
 }

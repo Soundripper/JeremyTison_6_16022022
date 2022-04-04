@@ -29,4 +29,9 @@ function photographerDataFactory(data) {
     portraitDiv.setAttribute("src", picture);
     photographerHeader.appendChild(portraitDiv);
 
+    // Price et likes
+    const priceDiv = document.createElement('h3');
+    priceDiv.className="price";
+    priceDiv.textContent = price +"€ / jour";
+    description.appendChild(priceDiv);
 }
