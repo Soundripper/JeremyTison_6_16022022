@@ -5,7 +5,6 @@ body {
     margin: 0;
 }
 
-
 header {
     display: flex;
     flex-direction: row;
@@ -131,7 +130,7 @@ a{
     padding : 50px;
     display : flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .imageCard{
@@ -140,8 +139,8 @@ a{
     margin : 0 30px 10px 30px;
 }
 .imageCard img, .imageCard video {
-    width : 300px;
-    height : 300px;
+    width : 250px;
+    height : 250px;
     object-fit:cover;
     border-radius: 10px;
 }
