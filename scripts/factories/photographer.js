@@ -1,6 +1,6 @@
 function photographerFactory(data) {
     // ajout city, country, tagline, price
-    const { name, portrait, city, country, tagline, price, id} = data;
+    const {name, portrait, city, country, tagline, price, id} = data;
 
     const picture = `assets/photographers/${portrait}`;
 
@@ -16,7 +16,7 @@ function photographerFactory(data) {
 
         // ajout link to photographer page
         article.appendChild(a);
-        a.href = "photographer.html?Id=" + id;
+        a.href = "photographer.html?id=" + id;
         a.appendChild(img);
         a.appendChild(h2);
 

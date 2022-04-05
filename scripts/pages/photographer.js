@@ -1,7 +1,7 @@
 //Mettre le code JavaScript lié à la page photographer.html
 
 let params = new URLSearchParams(document.location.search);
-const photographerId = params.get('Id');
+const photographerId = params.get('id');
 console.log(photographerId);
 
 const getPhotographerData = async () => {
@@ -15,12 +15,13 @@ const getPhotographerData = async () => {
 
 async function init() {
     // Récupère les datas du photographe
-    const {photographerData} = await getPhotographerData();
-    const {photographerMedias} = await getPhotographerData();
+    const {photographerData, photographerMedias} = await getPhotographerData();
     console.log(photographerData);
     console.log(photographerMedias);
     photographerDataFactory(photographerData);
-    mediaFactory(photographerMedias);
+    photographerMedias.forEach(media =>{
+        mediaFactory(media);
+    });
 };
 
 init();
