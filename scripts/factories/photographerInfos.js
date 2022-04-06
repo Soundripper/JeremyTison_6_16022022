@@ -1,8 +1,6 @@
 function photographerDataFactory(data) {
-    console.log(data);
     const { name, portrait, city, country, tagline, price} = data[0];
     const picture = `/assets/photographers/${portrait}`;
-    console.log(name);
 
     photographerHeader  = document.querySelector(".photograph-header");
 

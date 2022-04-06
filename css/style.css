@@ -137,6 +137,7 @@ a{
     display : flex;
     flex-direction: column;
     margin : 0 30px 10px 30px;
+    cursor: pointer;
 }
 .imageCard img, .imageCard video {
     width : 250px;

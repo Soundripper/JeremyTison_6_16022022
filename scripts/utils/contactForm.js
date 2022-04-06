@@ -2,12 +2,12 @@ const body = document.querySelector("body");
 const openModalBtn = document.querySelector(".contact_button");
 const header = document.querySelector('header');
 const mainWrapper = document.getElementById('main');
-const modal = document.querySelector(".modal");
+const modal = document.getElementById("contact_modal");
 const modalTitle = document.querySelector(".modal-title");
 const modalCloseBtn = document.querySelector(".closeBtn");
 
 function displayModal() {
-    const modal = document.getElementById("contact_modal");
+    
 	modal.style.display = "block";
 
     modal.setAttribute('aria-disabled', 'false');

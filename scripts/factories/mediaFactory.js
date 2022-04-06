@@ -1,7 +1,4 @@
 function mediaFactory(media){
-    // const {id, photographerId, title, image, video, likes, date, price} = data;
-
-    //////// Photograph Gallery ///////////////////////////////////////////////
 
     const gallery = document.querySelector('.photograph-galery');
     
@@ -11,6 +8,7 @@ function mediaFactory(media){
     
     if (media.hasOwnProperty("image")){
         const imageDiv = document.createElement('img');
+        imageDiv.classList.add("imageThumb");
         imageDiv.setAttribute("src", `assets/photosTotal/${media.image}`); 
         imageCard.appendChild(imageDiv);
     }else if(media.hasOwnProperty("video")){
@@ -24,18 +22,13 @@ function mediaFactory(media){
     imageTitle.textContent = media.title;
     imageCard.appendChild(imageTitle);
 
-    // data.forEach(media => {
-    //      // console.log(media.image);
-    //     const imageCard = document.createElement('div');
-    //     imageCard.className="imageCard";
-    //     gallery.appendChild(imageCard);
+    const imageCards = document.querySelectorAll(".imageCard");
+    // console.log(imageCards);
 
-    //     imageCard.innerHTML = `
-    //         <div>
-    //             <img src="assets/photosTotal/${media.image}" alt="">
-    //             <h4>${media.title}</h4>
-    //         </div>
-    //     `
-    // });
-
+    imageCards.forEach((imageCardElt, index) => {
+        imageCardElt.addEventListener("click",  e => {
+        displayLBox(index);
+        });
+    });
 }
+

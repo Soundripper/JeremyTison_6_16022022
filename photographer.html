@@ -2,16 +2,18 @@
 <html>
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/lightbox.css">
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <title>Fisheye - photographe </title>
   </head>
   <body>
     <header>
       <a href="index.html"><img src="assets/images/logo.png" class="logo" /></a>
     </header>
-    <main id="main" aria-hidden="false">
+    <main id="main" aria-disabled="false" aria-hidden="false">
       <div class="photograph-header">
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
       </div>
@@ -19,7 +21,7 @@
       </div>
     </main>
     <div id="contact_modal">
-			<div class="modal" aria-hidden="true" role="dialog" aria-describedby="modalTitle">
+			<div class="modal" aria-modal="true" aria-hidden="true" aria-disabled="true" role="dialog" aria-describedby="modalTitle">
 				<header>
           <h2 class="modal-title">Contactez-moi</h2>
           <button onclick="closeModal()" class="closeBtn"><img src="assets/icons/close.svg"/></button>
@@ -45,16 +47,21 @@
         <button class="submit_button" onclick="submitClick()">Envoyer</button>
 			</div>
 		</div>
-    <div class="lightbox">
-      <button class="lightbox__close">Fermer</button>
-      <button class="lightbox__next">Suivant</button>
-      <button class="lightbox__prev">Précédent</button>
+    <div id="lightbox" aria-modal="true" aria-hidden="true" aria-disabled="true" role="dialog" aria-describedby="modalTitle">
+      <button class="lightbox__close"><i class="fa-solid fa-xmark"></i></button>
+      <button class="lightbox__next"><i class="fa-solid fa-angle-right"></i></button>
+      <button class="lightbox__prev"><i class="fa-solid fa-angle-left"></i></button>
       <div class="lightbox__container">
+        <img class="imageBox">
+        <video class="videoBox" controls></video>
+        <div class="imageTitleBox"></div>
       </div>
     </div>
+    <script src="/scripts/utils/keysDown.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
     <script src="/scripts/factories/photographerInfos.js"></script>
     <script src="/scripts/factories/mediaFactory.js"></script>
+    <script src="/scripts/utils/lightbox.js"></script>
     <script src="/scripts/pages/photographer.js"></script>
   </body>
 </html>

@@ -12,7 +12,6 @@ function photographerFactory(data) {
         const a = document.createElement( 'a' );
         const h2 = document.createElement( 'h2' );
         h2.textContent = name;
-        console.log(name);
 
         // ajout link to photographer page
         article.appendChild(a);
