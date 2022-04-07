@@ -1,3 +1,5 @@
+/* photographer-header datas factory*/
+
 let contactName = null;
 
 function photographerDataFactory(data) {

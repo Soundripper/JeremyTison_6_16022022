@@ -2,10 +2,12 @@ const closeLightBox = document.querySelector(".lightbox__close");
 closeLightBox.addEventListener("click", event => {
     closeLBox();
 });
+
 const nextLightBox = document.querySelector(".lightbox__next");
 nextLightBox.addEventListener("click", event => {
     nextLBox();
 });
+
 const prevLightBox = document.querySelector(".lightbox__prev");
 prevLightBox.addEventListener("click", event => {
     prevLBox();
