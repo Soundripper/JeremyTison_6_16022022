@@ -26,6 +26,10 @@
     border: none;
     background-color: #901C1C;
     border-radius: 5px;
+}
+
+.contact_button:hover, .submit_button:hover, .contact_button:focus , .submit_button:focus {
+    background-color: #DB8876;
     cursor: pointer;
 }
 
@@ -44,13 +48,27 @@
 }
 
 .modal header {
-    justify-content: space-between;
+    height: 100%;
     width: 100%;
+    margin-bottom : 20px;
 }
 
-.modal header img {
-    cursor: pointer;
-    color: white;
+.modal header h2 {
+    font-size: 64px;
+    font-weight: normal;
+    text-align: left;
+    font-size: 30px;
+}
+
+.modal-title, .contactName{
+    margin : 0 0 10px 0;
+}
+
+.formContactInfos{
+    display : flex;
+    flex-direction: column;
+    margin : 0;
+    padding : 0;
 }
 
 .closeBtn{
@@ -60,12 +78,6 @@
 
 .no-scroll{
     overflow: hidden;
-}
-
-.modal header h2 {
-    font-size: 64px;
-    font-weight: normal;
-    text-align: center;
 }
 
 form {
@@ -103,4 +115,16 @@ form input {
     font-size: 24px;
     height : 200px;
     padding : 10px;
+}
+
+@media screen and (max-width: 920px) {
+    
+    
+    .modal{
+        display: flex;
+        justify-content: center;
+        width : 80%;
+        margin: auto;
+        padding : 10px;
+    }
 }

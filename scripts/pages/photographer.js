@@ -12,7 +12,6 @@ const getPhotographerData = async () => {
     return {photographerData, photographerMedias};
 }
 
-
 async function init() {
     // Récupère les datas du photographe
     const {photographerData, photographerMedias} = await getPhotographerData();

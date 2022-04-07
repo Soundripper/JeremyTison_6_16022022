@@ -3,7 +3,9 @@
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
@@ -23,7 +25,10 @@
     <div id="contact_modal">
 			<div class="modal" aria-modal="true" aria-hidden="true" aria-disabled="true" role="dialog" aria-describedby="modalTitle">
 				<header>
-          <h2 class="modal-title">Contactez-moi</h2>
+          <div class="formContactInfos">
+            <h2 class="modal-title">Contactez-moi</h2>
+            <h2 class="contactName"></h2>
+          </div>
           <button onclick="closeModal()" class="closeBtn"><img src="assets/icons/close.svg"/></button>
         </header>
 				<form>
@@ -58,6 +63,7 @@
       </div>
     </div>
     <script src="/scripts/utils/keysDown.js"></script>
+    <script src="/scripts/utils/likes.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
     <script src="/scripts/factories/photographerInfos.js"></script>
     <script src="/scripts/factories/mediaFactory.js"></script>

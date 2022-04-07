@@ -1,11 +1,14 @@
+let contactName = null;
+
 function photographerDataFactory(data) {
-    const { name, portrait, city, country, tagline, price} = data[0];
+    const {name, portrait, city, country, tagline, price} = data[0];
     const picture = `/assets/photographers/${portrait}`;
+
+    contactName = name;
+    console.log(contactName);
 
     photographerHeader  = document.querySelector(".photograph-header");
 
-    //////// Photograph header ///////////////////////////////////////////////
-    // Description container = name + location(city, country) + tagline
     const description = document.createElement('div');
     description.classList.add("description");
     photographerHeader.appendChild(description);

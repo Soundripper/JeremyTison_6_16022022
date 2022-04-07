@@ -3,6 +3,13 @@
 body {
     font-family: "DM Sans", sans-serif;
     margin: 0;
+    -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main{
+    max-width : 1500px;
+    margin : auto;
 }
 
 header {
@@ -11,16 +18,18 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 90px;
+    max-width : 1500px;
+    margin : auto;
 }
 
-h1 {
+header h1 {
     color: #901C1C;
-    margin-right: 100px;
+    margin-right: 10px;
 }
 
 .logo {
     height: 50px;
-    margin-left: 100px;
+    margin-left: 20px;
 }
 
 .photographer_section {
@@ -28,6 +37,10 @@ h1 {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 70px;
     margin-top: 100px;
+}
+
+article a img{
+    margin : auto;
 }
 
 .photographer_section article {
@@ -75,7 +88,6 @@ h1 {
 a{
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-decoration: none;
 }
 
@@ -84,6 +96,7 @@ a{
     display : flex;
     align-items: center;
     justify-content: space-around;
+    margin : 20px;
 }
 
 .photograph-header h2 {
@@ -126,7 +139,7 @@ a{
 /* Gallery */
 .photograph-galery{
     background-color: #FAFAFA;
-    margin: 20px 100px;
+    margin: 20px 20px;
     padding : 50px;
     display : flex;
     flex-wrap: wrap;
@@ -136,20 +149,48 @@ a{
 .imageCard{
     display : flex;
     flex-direction: column;
-    margin : 0 30px 10px 30px;
-    cursor: pointer;
+    margin : 0 30px 20px 30px;
+    align-items: center;;
 }
-.imageCard img, .imageCard video {
-    width : 250px;
-    height : 250px;
+
+.imageCardButton img, .imageCardButton video {
+    width : 300px;
+    height : 300px;
     object-fit:cover;
     border-radius: 10px;
 }
 
-.imageTitle {
+.imageCardButton{
+    border: none;
+    background: none;
+}
+
+.imageThumb{
+    cursor: pointer;
+}
+
+.imageInfos {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
     color: #901C1C;
     font-size: 15px;
-    margin-top : 8px;
+    height : 35px;
+    width : 95%;
+}
+
+.imageLikes{
+    width : 60px;
+    display: flex;
+    align-content:center;
+    justify-content: space-around;
+    border: none;
+    background: none;
+    cursor : pointer;
+}
+
+.heart{
+    color : #901C1C;
 }
 
 .price{
@@ -161,3 +202,51 @@ a{
     right : 0;
     border-radius: 3px;
 }
+
+@media screen and (max-width: 920px) {
+    .description{
+        align-items: center;
+    }
+    .photograph-header {
+        flex-direction: column;
+        height : 100%;
+        padding-bottom: 30px;
+    }
+    .contact_button{
+        margin : 20px;
+    }
+    .photograph-galery{
+        margin : 0px;
+    }
+    .imageCard img, .imageCard video {
+        width : 100%;
+        height : 100%;
+        object-fit:cover;
+        border-radius: 10px;
+    }
+    .photograph-galery{
+        display : flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding : 0;
+    }
+    .photographer_section {
+        display: flex;
+        flex-direction : column;
+        margin-top: 100px;
+        margin-left : 15px;
+        margin-right : 15px;
+        margin-bottom : 15px;
+    }
+    header h1{
+        text-align: right;
+        margin-right: 10px;
+        font-size : 20px;
+    }
+    .logo{
+        width: 50%;
+        height: auto;
+    }
+}
+
