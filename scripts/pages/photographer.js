@@ -19,7 +19,9 @@ async function init() {
 
 async function initMedias() {
     document.querySelector('.photograph-galery').innerHTML="";
+
     const {photographerMedias} = await getPhotographerData();
+
     if(sortParameter == "Titre"){
         photographerMedias.sort((a,b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0));
     }
@@ -29,8 +31,8 @@ async function initMedias() {
     if(sortParameter == "Date"){
         photographerMedias.sort((a,b) => (a.date > b.date) ? 1 : ((b.date > a.date) ? -1 : 0));
     }
+    myMediasArray = [];
     console.log(photographerMedias);
-
     photographerMedias.forEach(media =>{
         mediaFactory(media);
         myMediasArray.push(media);
