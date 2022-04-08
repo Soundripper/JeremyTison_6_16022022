@@ -5,6 +5,7 @@ const mainWrapper = document.getElementById('main');
 const modal = document.getElementById("contact_modal");
 const modalTitle = document.querySelector(".modal-title");
 const modalCloseBtn = document.querySelector(".closeBtn");
+
 const contactNameDiv = document.querySelector(".contactName");
 
 function displayModal() {

@@ -13,15 +13,31 @@ const getPhotographerData = async () => {
 }
 
 async function init() {
-    // Récupère les datas du photographe
-    const {photographerData, photographerMedias} = await getPhotographerData();
+    const {photographerData} = await getPhotographerData();
     photographerDataFactory(photographerData);
+};
+
+async function initMedias() {
+    document.querySelector('.photograph-galery').innerHTML="";
+    const {photographerMedias} = await getPhotographerData();
+    if(sortParameter == "Titre"){
+        photographerMedias.sort((a,b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0));
+    }
+    if(sortParameter == "Popularité"){
+        photographerMedias.sort((a,b) => (a.likes > b.likes) ? 1 : ((b.likes > a.likes) ? -1 : 0));
+    }
+    if(sortParameter == "Date"){
+        photographerMedias.sort((a,b) => (a.date > b.date) ? 1 : ((b.date > a.date) ? -1 : 0));
+    }
+    console.log(photographerMedias);
+
     photographerMedias.forEach(media =>{
         mediaFactory(media);
-        myArray.push(media);
+        myMediasArray.push(media);
     });
 };
 
-console.log(myArray);
+console.log(myMediasArray);
 
 init();
+initMedias();

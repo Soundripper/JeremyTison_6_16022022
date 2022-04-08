@@ -18,7 +18,7 @@ const videoToDisplay = document.querySelector(".videoBox");
 const textToDisplay = document.querySelector(".imageTitleBox");
 
 indexCurrent = null;
-myArray = [];
+myMediasArray = [];
 
 function displayLBox(index) {
     console.log(index);
@@ -39,16 +39,16 @@ function displayLBox(index) {
 }
 
 function refreshLBox(indexCurrent){
-    if(myArray[indexCurrent].image){
+    if(myMediasArray[indexCurrent].image){
         imageToDisplay.style.display = "block";
-        imageToDisplay.src = "assets/photosTotal/" + myArray[indexCurrent].image;
+        imageToDisplay.src = "assets/photosTotal/" + myMediasArray[indexCurrent].image;
         videoToDisplay.style.display = "none";
-    }else if(myArray[indexCurrent].video){
+    }else if(myMediasArray[indexCurrent].video){
         videoToDisplay.style.display = "block";
-        videoToDisplay.src = "assets/photosTotal/" + myArray[indexCurrent].video;
+        videoToDisplay.src = "assets/photosTotal/" + myMediasArray[indexCurrent].video;
         imageToDisplay.style.display = "none";
     }    
-    textToDisplay.textContent = myArray[indexCurrent].title;
+    textToDisplay.textContent = myMediasArray[indexCurrent].title;
 }
 
 function closeLBox() {
@@ -68,7 +68,7 @@ function closeLBox() {
 }
 
 function nextLBox(){
-    if(indexCurrent >= myArray.length -1){
+    if(indexCurrent >= myMediasArray.length -1){
         indexCurrent = 0;
         console.log(indexCurrent);
     }else{
@@ -80,7 +80,7 @@ function nextLBox(){
 
 function prevLBox(){
     if(indexCurrent <= 0) {
-        indexCurrent = myArray.length -1;
+        indexCurrent = myMediasArray.length -1;
         console.log(indexCurrent);
     }else{
         indexCurrent -= 1;

@@ -1,3 +1,5 @@
+let sortParameter = null;
+
 const sortBtn = document.querySelector(".sortButton");
 
 const listToModify = document.querySelector("ul");
@@ -39,6 +41,8 @@ listItemsToShuffle.forEach((element, index)=> {
         second = listItems[1];
         third = listItems[2];
         console.log(e.target.textContent);
+        sortParameter = e.target.textContent;
+        initMedias();
     });
 });
 

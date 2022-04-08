@@ -1,5 +1,5 @@
 function mediaFactory(media){
-
+    const {photographerId, title, image, video, likes, date, price} = media;
     const gallery = document.querySelector('.photograph-galery');
     
     const imageCard = document.createElement('div');
@@ -12,12 +12,12 @@ function mediaFactory(media){
     if (media.hasOwnProperty("image")){
         const imageDiv = document.createElement('img');
         imageDiv.classList.add("imageThumb");
-        imageDiv.setAttribute("src", `assets/photosTotal/${media.image}`); 
+        imageDiv.setAttribute("src", `assets/photosTotal/${image}`); 
         imageCardButton.appendChild(imageDiv);
     }else if(media.hasOwnProperty("video")){
         const imageDiv = document.createElement('video');
         imageDiv.classList.add("imageThumb");
-        imageDiv.setAttribute("src", `assets/photosTotal/${media.video}`); 
+        imageDiv.setAttribute("src", `assets/photosTotal/${video}`); 
         imageCardButton.appendChild(imageDiv);
     }
     
@@ -26,11 +26,11 @@ function mediaFactory(media){
 
     const imageTitle = document.createElement('h4');
     imageTitle.className="imageTitle";
-    imageTitle.textContent = media.title;
+    imageTitle.textContent = title;
 
     const imageLikes = document.createElement('button');
     imageLikes.className="imageLikes";
-    imageLikes.innerHTML = media.likes + '<i class="fa-solid fa-heart heart"></i>';
+    imageLikes.innerHTML = likes + '<i class="fa-solid fa-heart heart"></i>';
 
     imageCard.appendChild(imageInfos);
     imageInfos.appendChild(imageTitle);
@@ -45,4 +45,3 @@ function mediaFactory(media){
         });
     });
 }
-
