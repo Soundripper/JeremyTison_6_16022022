@@ -222,6 +222,7 @@ a{
 /* .sort{
     margin : 0px 20px 0 30px;
     display : flex;
+    align-items: center;
 }
 
 .sortButton{
@@ -231,11 +232,15 @@ a{
     border : none;
     border-radius : 5px;
     width : 100px;
+}
+.sortSelect{
+    margin-left: 20px;
 } */
 
 .sort{
     margin : 0px 20px 0 30px;
     display : flex;
+    align-items: center;
 }
 
 .sortButton{

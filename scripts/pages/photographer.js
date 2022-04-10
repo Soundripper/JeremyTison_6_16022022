@@ -40,7 +40,6 @@ async function initMedias() {
         mediaFactory(media);
         myMediasArray.push(media);
         totalLikes += media.likes;
-        console.log(totalLikes);
     });
     totalLikesDiv = document.querySelector(".totalLikes");
     totalLikesDiv.innerHTML = totalLikes + " " + '<i class="fa-solid fa-heart heart"></i>';

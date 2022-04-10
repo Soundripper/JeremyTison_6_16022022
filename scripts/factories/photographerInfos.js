@@ -47,7 +47,7 @@ function photographerDataFactory(data) {
     totalLikesDiv.className="totalLikes";
     priceLikesDiv.appendChild(totalLikesDiv);
 
-    const imageCards = document.querySelectorAll(".imageCardButton");
+    // const imageCards = document.querySelectorAll(".imageCardButton");
     // console.log(imageCards);
 
 }
