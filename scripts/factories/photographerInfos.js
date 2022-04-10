@@ -34,8 +34,20 @@ function photographerDataFactory(data) {
     photographerHeader.appendChild(portraitDiv);
 
     // Price et likes
+    const priceLikesDiv = document.createElement('div');
+    priceLikesDiv.className="priceLikesDiv";
     const priceDiv = document.createElement('h3');
     priceDiv.className="price";
     priceDiv.textContent = price +"€ / jour";
-    description.appendChild(priceDiv);
+    priceLikesDiv.appendChild(priceDiv);
+    description.appendChild(priceLikesDiv);
+
+    //Total likes
+    const totalLikesDiv = document.createElement('h3');
+    totalLikesDiv.className="totalLikes";
+    priceLikesDiv.appendChild(totalLikesDiv);
+
+    const imageCards = document.querySelectorAll(".imageCardButton");
+    // console.log(imageCards);
+
 }
