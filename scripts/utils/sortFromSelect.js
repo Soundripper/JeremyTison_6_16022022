@@ -36,6 +36,6 @@ window.onload = () => {
         e.stopPropagation();
         newSelect.classList.toggle("select-hide");
         this.nextElementSibling.classList.toggle("select-hide");
-        this.classList.toggle("active");
+        newMenu.firstChild.classList.add("upArrow");
     });
 }

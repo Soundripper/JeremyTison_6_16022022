@@ -42,7 +42,7 @@ header h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 70px;
-    margin-top: 100px;
+    margin: 50px 0 50px 0;
 }
 
 article a img{
@@ -79,7 +79,7 @@ article a img{
 .photographer_section article .h4price {
     color: black;
     font-size: 15px;
-    margin : 0;
+    margin : 5px 0 0 0;
     opacity : 70%;
 }
 
@@ -144,18 +144,17 @@ a{
 }
 /* Gallery */
 .photograph-galery{
-    background-color: #FAFAFA;
-    margin: 20px 20px;
-    padding : 50px;
+    /* background-color: #FAFAFA; */
     display : flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content:space-around;
+    margin-top : 20px;
 }
 
 .imageCard{
     display : flex;
     flex-direction: column;
-    margin : 0 30px 20px 30px;
+    margin : 0 10px 20px 10px;
     align-items: center;;
 }
 
@@ -181,7 +180,7 @@ a{
     align-items: center;
     color: #901C1C;
     font-size: 15px;
-    height : 35px;
+    height : 25px;
     width : 95%;
 }
 
@@ -193,11 +192,16 @@ a{
     border: none;
     background: none;
     cursor : pointer;
-    color: #901C1C;
+    color: #D3573C;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .heart{
-    color : #901C1C;
+    color :#901C1C;
+}
+.priceLikesDiv .heart{
+    color : black;
 }
 
 .priceLikesDiv{
@@ -208,11 +212,11 @@ a{
     justify-content: space-between;
     background-color:#D3573C;
     margin-right: 20px;
-    padding : 10px;
+    padding : 10px 10px 14px 10px;
     position : fixed;
     bottom: -10px;
     right : 0;
-    border-radius: 3px;
+    border-radius: 8px;
 }
 .totalLikes{
     order : -1;
@@ -237,12 +241,6 @@ a{
     margin-left: 20px;
 } */
 
-.sort{
-    margin : 0px 20px 0 30px;
-    display : flex;
-    align-items: center;
-}
-
 /* .sortButton{
     margin-left : 20px;
     background-color : #901C1C;
@@ -250,11 +248,11 @@ a{
     border : none;
     border-radius : 5px;
     width : 100px;
-} */ */
+} */
 
 
 
-li hr{
+/* li hr{
     border: none;
     height: 1px;
     color: white;
@@ -279,7 +277,7 @@ li hr{
     list-style: none;
     text-align: left;
     background-color : #D3573C;
-}
+} */
 
 @media screen and (max-width: 920px) {
     .description{
