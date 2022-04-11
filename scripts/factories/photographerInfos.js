@@ -4,7 +4,7 @@ let contactName = null;
 
 function photographerDataFactory(data) {
     const {name, portrait, city, country, tagline, price} = data[0];
-    const picture = `/assets/photographers/${portrait}`;
+    const picture = `assets/photographers/${portrait}`;
 
     contactName = name;
     console.log(contactName);
