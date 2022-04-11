@@ -2,6 +2,7 @@
 <html>
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/sortFromSelect.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/normalize.css">
     <meta charset="utf-8">
@@ -21,20 +22,20 @@
       </div>
       <div class="sort">
         <h4>Trier par</h4>
-        <!-- <div class="sortSelect">
-          <select name="sortSelectDD" id="sortSelectDD" onchange="getSortValue()">
+        <div class="sortSelect">
+          <select name="sortSelectDD" id="sortSelectDD">
             <option value="Popularité">Popularité</option>
             <option value="Date">Date</option>
             <option value="Titre">Titre</option>
           </select>
-        </div> -->
-        <button class="sortButton">
+        </div>
+        <!-- <button class="sortButton">
           <ul>
             <li>Popularité<hr></li>
             <li>Date<hr></li>
             <li>Titre<hr></li>
           </ul>
-        </button>
+        </button> -->
       </div>
       <div class="photograph-galery">
       </div>
@@ -81,7 +82,7 @@
     </div>
     <script src="/scripts/utils/keysDown.js"></script>
     <script src="/scripts/utils/likes.js"></script>
-    <script src="/scripts/utils/sort.js"></script>
+    <script src="/scripts/utils/sortFromSelect.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
     <script src="/scripts/factories/photographerInfos.js"></script>
     <script src="/scripts/factories/mediaFactory.js"></script>
