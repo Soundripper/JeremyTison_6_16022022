@@ -31,6 +31,9 @@ function mediaFactory(media){
     const imageLikes = document.createElement('button');
     imageLikes.className="imageLikes";
     imageLikes.innerHTML = likes + '<i class="fa-solid fa-heart heart"></i>';
+    imageLikes.addEventListener("click", function(){
+        imageLikes.innerHTML = (likes + 1) + '<i class="fa-solid fa-heart heart"></i>';
+    });
 
     imageCard.appendChild(imageInfos);
     imageInfos.appendChild(imageTitle);

@@ -188,13 +188,11 @@ a{
 .imageLikes{
     width : 60px;
     display: flex;
-    align-content:center;
     justify-content: space-around;
     border: none;
     background: none;
     cursor : pointer;
     color: #901C1C;
-    font-size: 15px;
     font-weight: bold;
 }
 
