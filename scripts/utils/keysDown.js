@@ -3,4 +3,10 @@ document.addEventListener('keydown', (event) => {
         closeModal();
         closeLBox();
     }
+    if (event.key === 'ArrowLeft') {
+        prevLBox();
+    }
+    if (event.key === 'ArrowRight') {
+        nextLBox();
+    }
 })
