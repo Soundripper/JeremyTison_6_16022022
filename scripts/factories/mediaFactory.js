@@ -38,7 +38,7 @@ function mediaFactory(media){
         // const likeService = new LikeService();
         // likeService.incrementTotalLikes();
         // likeService.renderValue();
-        // imageLikes.removeEventListener("click", adder);
+        imageLikes.removeEventListener("click", adder);
     });
 
     imageCard.appendChild(imageInfos);

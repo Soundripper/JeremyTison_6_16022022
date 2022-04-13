@@ -17,7 +17,6 @@ async function init() {
     photographerDataFactory(photographerData);
     // const likeService = new LikeService();
     // likeService.initLikes(photographerMedias);
-    // likeService.renderValue();
 };
 
 async function initMedias() {

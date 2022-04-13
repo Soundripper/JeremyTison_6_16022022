@@ -7,6 +7,7 @@ class LikeService{
             this.totalLikes += media.likes;
         });
         this.totalLikesDiv = document.querySelector(".totalLikes");
+        this.renderValue();
     }
     get totalLikes(){
         return this.totalLikes;
@@ -17,6 +18,7 @@ class LikeService{
     incrementTotalLikes = () => {
         // console.log(this.totalLikes);
         this.totalLikes+=1;
+        this.renderValue();
     }
     renderValue = () => {
         // const totalLikesDiv = document.querySelector(".totalLikes");
