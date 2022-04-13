@@ -8,20 +8,17 @@ const getPhotographerData = async () => {
     const photographersData = await response.json();
     const photographerData = photographersData.photographers.filter(x => x.id == photographerId);
     const photographerMedias = photographersData.media.filter(x => x.photographerId == photographerId);
-    //console.log(photographerData);
     return {photographerData, photographerMedias};
 }
 
 async function init() {
     const {photographerData, photographerMedias} = await getPhotographerData();
     photographerDataFactory(photographerData);
-    // const likeService = new LikeService();
-    // likeService.initLikes(photographerMedias);
 };
 
 async function initMedias() {
-    totalLikes = 0;
-    document.querySelector('.photograph-galery').innerHTML="";
+    // totalLikes = 0;
+    document.querySelector('.photograph-gallery').innerHTML="";
 
     const {photographerMedias} = await getPhotographerData();
 
@@ -39,10 +36,14 @@ async function initMedias() {
     photographerMedias.forEach(media =>{
         mediaFactory(media);
         myMediasArray.push(media);
-        totalLikes += media.likes;
+        // totalLikes += media.likes;
     });
-    totalLikesDiv = document.querySelector(".totalLikes");
-    totalLikesDiv.innerHTML = totalLikes + " " + '<i class="fa-solid fa-heart heart"></i>';
+
+    const likeService = new LikeService();
+    likeService.initLikes(photographerMedias);
+    likeService.imageLikesEventClick();
+    // totalLikesDiv = document.querySelector(".totalLikes");
+    // totalLikesDiv.innerHTML = totalLikes + " " + '<i class="fa-solid fa-heart heart"></i>';
 };
 
 init();

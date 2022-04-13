@@ -143,7 +143,7 @@ a{
     order: 2;
 }
 /* Gallery */
-.photograph-galery{
+.photograph-gallery{
     /* background-color: #FAFAFA; */
     display : flex;
     flex-wrap: wrap;
@@ -290,7 +290,7 @@ a{
     .contact_button{
         margin : 20px;
     }
-    .photograph-galery{
+    .photograph-gallery{
         margin : 0px;
     }
     .imageCard img, .imageCard video {
@@ -299,7 +299,7 @@ a{
         object-fit:cover;
         border-radius: 10px;
     }
-    .photograph-galery{
+    .photograph-gallery{
         display : flex;
         flex-direction: column;
         flex-wrap: wrap;

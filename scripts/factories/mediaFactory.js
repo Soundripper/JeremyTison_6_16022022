@@ -1,6 +1,6 @@
 function mediaFactory(media){
     const {photographerId, title, image, video, likes, date, price} = media;
-    const gallery = document.querySelector('.photograph-galery');
+    const gallery = document.querySelector('.photograph-gallery');
     
     const imageCard = document.createElement('div');
     imageCard.className="imageCard";
@@ -31,27 +31,27 @@ function mediaFactory(media){
     const imageLikes = document.createElement('button');
     imageLikes.className="imageLikes";
     imageLikes.innerHTML = likes + '<i class="fa-solid fa-heart heart"></i>';
-    const totalLikesDivAdd = document.querySelector(".totalLikes");
+    // const totalLikesDivAdd = document.querySelector(".totalLikes");
     imageLikes.addEventListener("click", function adder(){
         imageLikes.innerHTML = (likes + 1) + '<i class="fa-solid fa-heart heart"></i>';
-        totalLikesDivAdd.innerHTML = (totalLikes += 1) + " " + '<i class="fa-solid fa-heart heart"></i>';
-        // const likeService = new LikeService();
-        // likeService.incrementTotalLikes();
-        // likeService.renderValue();
-        imageLikes.removeEventListener("click", adder);
+        // totalLikesDivAdd.innerHTML = (totalLikes += 1) + " " + '<i class="fa-solid fa-heart heart"></i>';
+        // imageLikes.removeEventListener("click", adder);
     });
 
     imageCard.appendChild(imageInfos);
     imageInfos.appendChild(imageTitle);
     imageInfos.appendChild(imageLikes);
 
-    const imageCards = document.querySelectorAll(".imageCardButton");
-    // console.log(imageCards);
+    // const imageCards = document.querySelectorAll(".imageCardButton");
+    // // console.log(imageCards);
 
-    imageCards.forEach((imageCardElt, index) => {
-        imageCardElt.addEventListener("click",  e => {
-        displayLBox(index);
-        });
-    });
+    // imageCards.forEach((imageCardElt, index) => {
+    //     imageCardElt.addEventListener("click",  e => {
+    //     displayLBox(index);
+    //     });
+    // });
+
+    const lightBoxService = new LightBoxEvent();
+    lightBoxService.displayLBox();
     
 }

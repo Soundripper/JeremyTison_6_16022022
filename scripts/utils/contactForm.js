@@ -9,8 +9,9 @@ const modalCloseBtn = document.querySelector(".closeBtn");
 const contactNameDiv = document.querySelector(".contactName");
 
 function displayModal() {
-    contactNameDiv.textContent = contactName;
 	modal.style.display = "block";
+
+    contactNameDiv.textContent = contactName;
 
     modal.setAttribute('aria-disabled', 'false');
     modal.setAttribute('aria-modal', 'true');
@@ -49,8 +50,4 @@ const submitClick = () =>{
     closeModal();
 };
 
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-        closeModal();
-    }
-  })
+
