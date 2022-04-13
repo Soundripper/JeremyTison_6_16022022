@@ -1,7 +1,5 @@
 //Mettre le code JavaScript lié à la page photographer.html
 
-totalLikes = 0;
-
 let params = new URLSearchParams(document.location.search);
 const photographerId = params.get('id');
 
@@ -15,8 +13,11 @@ const getPhotographerData = async () => {
 }
 
 async function init() {
-    const {photographerData} = await getPhotographerData();
+    const {photographerData, photographerMedias} = await getPhotographerData();
     photographerDataFactory(photographerData);
+    // const likeService = new LikeService();
+    // likeService.initLikes(photographerMedias);
+    // likeService.renderValue();
 };
 
 async function initMedias() {
@@ -26,13 +27,13 @@ async function initMedias() {
     const {photographerMedias} = await getPhotographerData();
 
     if(sortParameter == "Titre"){
-        photographerMedias.sort((a,b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0));
+        photographerMedias.sort((a,b) => (a.title > b.title) ? 1 : ((a.title < b.title) ? -1 : 0));
     }
     if(sortParameter == "Popularité"){
-        photographerMedias.sort((a,b) => (a.likes > b.likes) ? -1 : ((b.likes > a.likes) ? 1 : 0));
+        photographerMedias.sort((a,b) => (a.likes > b.likes) ? -1 : ((a.likes < b.likes) ? 1 : 0));
     }
     if(sortParameter == "Date"){
-        photographerMedias.sort((a,b) => (a.date > b.date) ? 1 : ((b.date > a.date) ? -1 : 0));
+        photographerMedias.sort((a,b) => (a.date > b.date) ? 1 : ((a.date < b.date) ? -1 : 0));
     }
     myMediasArray = [];
     console.log(photographerMedias);
@@ -44,8 +45,6 @@ async function initMedias() {
     totalLikesDiv = document.querySelector(".totalLikes");
     totalLikesDiv.innerHTML = totalLikes + " " + '<i class="fa-solid fa-heart heart"></i>';
 };
-
-console.log(myMediasArray);
 
 init();
 initMedias();

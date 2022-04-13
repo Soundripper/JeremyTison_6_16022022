@@ -22,13 +22,21 @@
       </div>
       <div class="sort">
         <h4>Trier par</h4>
-        <div class="sortSelect">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Popularité</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#" id="Popularité">Popularité</a>
+            <a href="#" id="Date">Date</a>
+            <a href="#" id="Titre">Titre</a>
+          </div>
+        </div>
+        <!-- <div class="sortSelect">
           <select name="sortSelectDD" id="sortSelectDD">
             <option value="Popularité">Popularité</option>
             <option value="Date">Date</option>
             <option value="Titre">Titre</option>
           </select>
-        </div>
+        </div> -->
         <!-- <button class="sortButton">
           <ul>
             <li>Popularité<hr></li>
@@ -81,12 +89,13 @@
       </div>
     </div>
     <script src="scripts/utils/keysDown.js"></script>
-    <script src="scripts/utils/likes.js"></script>
+    <script src="scripts/utils/likeService.js"></script>
     <script src="scripts/utils/sortFromSelect.js"></script>
     <script src="scripts/utils/contactForm.js"></script>
     <script src="scripts/factories/photographerInfos.js"></script>
     <script src="scripts/factories/mediaFactory.js"></script>
     <script src="scripts/utils/lightbox.js"></script>
-    <script src="scripts/pages/photographer.js"></script>
+    <script src="scripts/factories/photographerFactory.js"></script>
+    <script src="scripts/pages/photographerPage.js"></script>
   </body>
 </html>
