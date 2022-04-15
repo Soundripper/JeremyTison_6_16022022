@@ -6,19 +6,28 @@ function mediaFactory(media){
     imageCard.className="imageCard";
     const imageCardButton = document.createElement('button');
     imageCardButton.className="imageCardButton";
+    
+    // imageCardButton.textContent="button";
     gallery.appendChild(imageCard);
     imageCard.appendChild(imageCardButton);
+    imageCardButton.setAttribute("aria-label", title);
+    imageCardButton.setAttribute("aria-describedby", "versGalerie");
+    // imageCardButton.setAttribute("aria-describedby", "versGalerie");
     
     if (media.hasOwnProperty("image")){
         const imageDiv = document.createElement('img');
         imageDiv.classList.add("imageThumb");
         imageDiv.setAttribute("src", `assets/photosTotal/${image}`); 
         imageCardButton.appendChild(imageDiv);
+        imageDiv.setAttribute("aria-label", title);
+        imageDiv.setAttribute("aria-describedby", "versGalerie");
     }else if(media.hasOwnProperty("video")){
         const imageDiv = document.createElement('video');
         imageDiv.classList.add("imageThumb");
-        imageDiv.setAttribute("src", `assets/photosTotal/${video}`); 
+        imageDiv.setAttribute("src", `assets/photosTotal/${video}`);
         imageCardButton.appendChild(imageDiv);
+        imageDiv.setAttribute("aria-label", title);
+        imageDiv.setAttribute("aria-describedby", "versGalerie");
     }
     
     const imageInfos = document.createElement('div');

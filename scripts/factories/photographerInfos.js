@@ -30,6 +30,7 @@ function photographerDataFactory(data) {
 
     // Image
     const portraitDiv = document.createElement('img')
+    portraitDiv.setAttribute("alt", name);
     portraitDiv.setAttribute("src", picture);
     photographerHeader.appendChild(portraitDiv);
 
@@ -46,5 +47,6 @@ function photographerDataFactory(data) {
     const totalLikesDiv = document.createElement('h3');
     totalLikesDiv.className="totalLikes";
     priceLikesDiv.appendChild(totalLikesDiv);
+    totalLikesDiv.setAttribute("aria-label", "Prix et j'aime");
 }
 
