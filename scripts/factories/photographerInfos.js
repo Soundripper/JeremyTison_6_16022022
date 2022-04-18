@@ -7,7 +7,7 @@ function photographerDataFactory(data) {
     const picture = `assets/photographers/${portrait}`;
 
     contactName = name;
-    console.log(contactName);
+    // console.log(contactName);
 
     photographerHeader  = document.querySelector(".photograph-header");
 

@@ -1,3 +1,17 @@
+class Sorter {
+    static sortMedias = (elements, property) => {
+        return elements.sort((a,b) => {
+            if (a[property] > b[property]){
+                return 1;
+            }
+            if (a[property] < b[property]){
+                return -1;
+            }
+            return 0;
+        })
+    }
+}
+
 class LikeService{
     totalLikes = 0;
     totalLikesDiv;
@@ -10,12 +24,7 @@ class LikeService{
         this.totalLikesDiv = document.querySelector(".totalLikes");
         this.renderValue();
     }
-    // get totalLikes(){
-    //     return this.totalLikes;
-    // }
-    // get totalLikesDiv(){
-    //     return this.totalLikesDiv = document.querySelector(".totalLikes");
-    // }
+    
     renderValue = () => {
         this.totalLikesDiv.innerHTML = `${this.totalLikes} <i class="fa-solid fa-heart heart"></i>`;
     }

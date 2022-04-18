@@ -23,7 +23,7 @@ myMediasArray = [];
 function displayLBox(index) {
     trapFocusLightbox();
 
-    console.log(index);
+    // console.log(index);
     const lightbox = document.getElementById("lightbox");
 	lightbox.style.display = "flex";
     indexCurrent = index;
@@ -74,10 +74,10 @@ function closeLBox() {
 function nextLBox(){
     if(indexCurrent >= myMediasArray.length -1){
         indexCurrent = 0;
-        console.log(indexCurrent);
+        // console.log(indexCurrent);
     }else{
         indexCurrent += 1;
-        console.log(indexCurrent);
+        // console.log(indexCurrent);
     }
     refreshLBox(indexCurrent);
 }
@@ -85,10 +85,10 @@ function nextLBox(){
 function prevLBox(){
     if(indexCurrent <= 0) {
         indexCurrent = myMediasArray.length -1;
-        console.log(indexCurrent);
+        // console.log(indexCurrent);
     }else{
         indexCurrent -= 1;
-        console.log(indexCurrent);
+        // console.log(indexCurrent);
     }
     refreshLBox(indexCurrent);
 }

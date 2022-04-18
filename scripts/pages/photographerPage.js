@@ -23,16 +23,19 @@ async function initMedias() {
     const {photographerMedias} = await getPhotographerData();
 
     if(sortParameter == "Titre"){
-        photographerMedias.sort((a,b) => (a.title > b.title) ? 1 : ((a.title < b.title) ? -1 : 0));
+        Sorter.sortMedias(photographerMedias, 'title');
+        // photographerMedias.sort((a,b) => (a.title > b.title) ? 1 : ((a.title < b.title) ? -1 : 0));
     }
     if(sortParameter == "Popularité"){
-        photographerMedias.sort((a,b) => (a.likes > b.likes) ? -1 : ((a.likes < b.likes) ? 1 : 0));
+        Sorter.sortMedias(photographerMedias, 'likes');
+        // photographerMedias.sort((a,b) => (a.likes > b.likes) ? -1 : ((a.likes < b.likes) ? 1 : 0));
     }
     if(sortParameter == "Date"){
-        photographerMedias.sort((a,b) => (a.date > b.date) ? 1 : ((a.date < b.date) ? -1 : 0));
+        Sorter.sortMedias(photographerMedias, 'date');
+        // photographerMedias.sort((a,b) => (a.date > b.date) ? 1 : ((a.date < b.date) ? -1 : 0));
     }
     myMediasArray = [];
-    console.log(photographerMedias);
+    // console.log(photographerMedias);
     photographerMedias.forEach(media =>{
         mediaFactory(media);
         myMediasArray.push(media);
