@@ -12,7 +12,7 @@ const getPhotographerData = async () => {
 }
 
 async function init() {
-    const {photographerData, photographerMedias} = await getPhotographerData();
+    const {photographerData} = await getPhotographerData();
     photographerDataFactory(photographerData);
 };
 

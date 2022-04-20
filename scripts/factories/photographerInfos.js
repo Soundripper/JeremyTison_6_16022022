@@ -1,6 +1,6 @@
 /* photographer-header datas factory*/
 
-let contactName = null;
+// let contactName = null;
 
 function photographerDataFactory(data) {
     const {name, portrait, city, country, tagline, price} = data[0];

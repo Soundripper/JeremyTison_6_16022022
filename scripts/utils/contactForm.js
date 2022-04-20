@@ -6,11 +6,9 @@ const modal = document.getElementById("contact_modal");
 const modalTitle = document.querySelector(".modal-title");
 const modalCloseBtn = document.querySelector(".closeBtn");
 
-const contactNameDiv = document.querySelector(".contactName");
-
 function displayModal() {
 	modal.style.display = "block";
-
+    const contactNameDiv = document.querySelector(".contactName");
     contactNameDiv.innerHTML = contactName;
     trapFocusContact();
     // modal.setAttribute('aria-disabled', 'false');

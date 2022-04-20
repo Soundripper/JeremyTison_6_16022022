@@ -1,4 +1,3 @@
-
 function trapFocusLightbox() {
   // add all the elements inside modal which you want to make focusable
   const  lBfocusableElements =
