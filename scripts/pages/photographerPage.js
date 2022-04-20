@@ -6,7 +6,8 @@ const photographerId = params.get('id');
 const getPhotographerData = async () => {
     const response = await fetch("data/photographers.json");
     const photographersData = await response.json();
-    const photographerData = photographersData.photographers.filter(x => x.id == photographerId);
+    // const photographerData = photographersData.photographers.filter(x => x.id == photographerId);
+    const photographerData = photographersData.photographers.filter(x => x.id == photographerId)[0];
     const photographerMedias = photographersData.media.filter(x => x.photographerId == photographerId);
     return {photographerData, photographerMedias};
 }

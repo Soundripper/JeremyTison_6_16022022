@@ -17,8 +17,8 @@ const imageToDisplay = document.querySelector(".imageBox");
 const videoToDisplay = document.querySelector(".videoBox");
 const textToDisplay = document.querySelector(".imageTitleBox");
 
-indexCurrent = null;
-myMediasArray = [];
+// indexCurrent = null;
+// myMediasArray = [];
 
 function displayLBox(index) {
     trapFocusLightbox();

@@ -3,7 +3,7 @@
 // let contactName = null;
 
 function photographerDataFactory(data) {
-    const {name, portrait, city, country, tagline, price} = data[0];
+    const {name, portrait, city, country, tagline, price} = data;
     const picture = `assets/photographers/${portrait}`;
 
     contactName = name;
@@ -18,15 +18,21 @@ function photographerDataFactory(data) {
     const nameDiv = document.createElement('h2');
     nameDiv.textContent = name;
     description.appendChild(nameDiv);
+    nameDiv.setAttribute("aria-label", name);
+    nameDiv.setAttribute("tabindex", 1);
 
     const location = document.createElement('h4')
     location.textContent = city + ", "+ country;
     description.appendChild(location);
+    location.setAttribute("aria-label", city + country);
+    location.setAttribute("tabindex", 1);
 
     const taglineDiv = document.createElement('h4');
     taglineDiv.className="h4tag";
     taglineDiv.textContent = tagline;
     description.appendChild(taglineDiv);
+    taglineDiv.setAttribute("aria-label", tagline);
+    taglineDiv.setAttribute("tabindex", 1);
 
     // Image
     const portraitDiv = document.createElement('img')

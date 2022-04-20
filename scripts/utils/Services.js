@@ -1,13 +1,13 @@
 class Sorter {
-    static sortMedias = (elements, property) => {
+    static sortMedias = (elements, property, order = "desc") => {
         return elements.sort((a,b) => {
+
             if (a[property] > b[property]){
                 return 1;
             }
             if (a[property] < b[property]){
                 return -1;
             }
-            return 0;
         })
     }
 }
@@ -28,13 +28,13 @@ class LikeService{
         this.renderValue();
     }
 
-    // get totalLikes() {
-    //     return this.totalLikes;
-    // }
+    get totalLikes() {
+        return this.totalLikes;
+    }
 
-    // get likes() {
-    //     return this.likes;
-    // }
+    get likes() {
+        return this.likes;
+    }
     
     renderValue = () => {
         this.totalLikesDiv.innerHTML = `${this.totalLikes} <i class="fa-solid fa-heart heart"></i>`;
@@ -43,9 +43,6 @@ class LikeService{
     imageLikesEventClick() {
         let totalLikes = this.totalLikes;
 
-        // let likes = this.likes;
-        // console.log(likes);
-
         const imageLikeBtn = document.querySelectorAll(".imageLikes");
         imageLikeBtn.forEach(element => {
             element.addEventListener("click", function adder(e){
@@ -53,10 +50,6 @@ class LikeService{
                 // console.log(totalLikes);
                 this.totalLikesDiv = document.querySelector(".totalLikes");
                 this.totalLikesDiv.innerHTML = (totalLikes) + " " + `<i class="fa-solid fa-heart heart"></i>`;
-                
-                // console.log(this.likes);
-                // e.currentTarget.innerHTML = (likes + 1) + '<i class="fa-solid fa-heart heart"></i>';
-
                 e.currentTarget.removeEventListener("click", adder);
             });
         });

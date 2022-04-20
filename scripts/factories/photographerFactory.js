@@ -24,16 +24,22 @@ function photographerFactory(data) {
         const h4 = document.createElement( 'h4' );
         h4.textContent = city + ", " + country;
         article.appendChild(h4);
+        h4.setAttribute("aria-label", city + country);
+        h4.setAttribute("tabindex", 0);
 
         const h4tag = document.createElement( 'h4' );
         h4tag.className="h4tag";
         h4tag.textContent = tagline;
         article.appendChild(h4tag);
+        h4tag.setAttribute("aria-label", tagline);
+        h4tag.setAttribute("tabindex", 0);
 
         const h4price = document.createElement( 'h4' );
         h4price.className="h4price";
         h4price.textContent = price + "€/jour";
         article.appendChild(h4price);
+        h4price.setAttribute("aria-label", price + "euros");
+        h4price.setAttribute("tabindex", 0);
 
         return (article);
     }
