@@ -65,7 +65,7 @@ class LikeService{
     }  
 }
 
-LightBoxEvent{
+class LightBoxEvent{
     displayLBox = () => {
         const imageCards = document.querySelectorAll(".imageCardButton");
         imageCards.forEach((imageCardElt, index) => {
