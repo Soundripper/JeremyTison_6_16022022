@@ -31,7 +31,6 @@ class Sorter {
 class LikeService{
     totalLikes = 0;
     totalLikesDiv;
-    likes = 0;
     totalLikesDiv = document.querySelector(".totalLikes");
 
     initLikes = (medias) =>{
@@ -44,10 +43,6 @@ class LikeService{
 
     get totalLikes() {
         return this.totalLikes;
-    }
-
-    get likes() {
-        return this.likes;
     }
     
     renderValue = () => {
@@ -70,7 +65,7 @@ class LikeService{
     }  
 }
 
-class LightBoxEvent{
+LightBoxEvent{
     displayLBox = () => {
         const imageCards = document.querySelectorAll(".imageCardButton");
         imageCards.forEach((imageCardElt, index) => {
