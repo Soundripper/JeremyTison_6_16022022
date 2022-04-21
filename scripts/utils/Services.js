@@ -1,12 +1,28 @@
 class Sorter {
     static sortMedias = (elements, property, order = "desc") => {
-        return elements.sort((a,b) => {
 
-            if (a[property] > b[property]){
-                return 1;
+        return elements.sort((a,b) => {
+            if (a[property] === b[property]){
+                return 0;
             }
-            if (a[property] < b[property]){
-                return -1;
+
+            switch (order){
+                case "desc" :
+                    if (a[property] < b[property]){
+                        return 1;
+                    }
+                    if (a[property] > b[property]){
+                        return -1;
+                    }
+                    break;
+                case "asc" :
+                    if (a[property] > b[property]){
+                        return 1;
+                    }
+                    if (a[property] < b[property]){
+                        return -1;
+                    }
+                    break;
             }
         })
     }
@@ -16,13 +32,11 @@ class LikeService{
     totalLikes = 0;
     totalLikesDiv;
     likes = 0;
+    totalLikesDiv = document.querySelector(".totalLikes");
 
     initLikes = (medias) =>{
         medias.forEach(media => {
             this.totalLikes += media.likes;
-
-            this.likes = media.likes;
-            console.log(this.likes);
         });
         this.totalLikesDiv = document.querySelector(".totalLikes");
         this.renderValue();

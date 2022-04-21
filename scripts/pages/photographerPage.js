@@ -6,7 +6,6 @@ const photographerId = params.get('id');
 const getPhotographerData = async () => {
     const response = await fetch("data/photographers.json");
     const photographersData = await response.json();
-    // const photographerData = photographersData.photographers.filter(x => x.id == photographerId);
     const photographerData = photographersData.photographers.filter(x => x.id == photographerId)[0];
     const photographerMedias = photographersData.media.filter(x => x.photographerId == photographerId);
     return {photographerData, photographerMedias};
@@ -24,15 +23,15 @@ async function initMedias() {
     const {photographerMedias} = await getPhotographerData();
 
     if(sortParameter == "Titre"){
-        Sorter.sortMedias(photographerMedias, 'title');
+        Sorter.sortMedias(photographerMedias, 'title', "asc");
         // photographerMedias.sort((a,b) => (a.title > b.title) ? 1 : ((a.title < b.title) ? -1 : 0));
     }
     if(sortParameter == "Popularité"){
-        Sorter.sortMedias(photographerMedias, 'likes');
+        Sorter.sortMedias(photographerMedias, 'likes', "desc");
         // photographerMedias.sort((a,b) => (a.likes > b.likes) ? -1 : ((a.likes < b.likes) ? 1 : 0));
     }
     if(sortParameter == "Date"){
-        Sorter.sortMedias(photographerMedias, 'date');
+        Sorter.sortMedias(photographerMedias, 'date', "asc");
         // photographerMedias.sort((a,b) => (a.date > b.date) ? 1 : ((a.date < b.date) ? -1 : 0));
     }
     myMediasArray = [];

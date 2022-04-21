@@ -6,13 +6,11 @@ function mediaFactory(media){
     imageCard.className="imageCard";
     const imageCardButton = document.createElement('button');
     imageCardButton.className="imageCardButton";
-    
-    // imageCardButton.textContent="button";
+
     gallery.appendChild(imageCard);
     imageCard.appendChild(imageCardButton);
     imageCardButton.setAttribute("aria-label", title);
     imageCardButton.setAttribute("aria-describedby", "versGalerie");
-    // imageCardButton.setAttribute("aria-describedby", "versGalerie");
     
     if (media.hasOwnProperty("image")){
         const imageDiv = document.createElement('img');

@@ -38,7 +38,7 @@ function photographerFactory(data) {
         h4price.className="h4price";
         h4price.textContent = price + "€/jour";
         article.appendChild(h4price);
-        h4price.setAttribute("aria-label", price + "euros");
+        h4price.setAttribute("aria-label", price + "euros par jour");
         h4price.setAttribute("tabindex", 0);
 
         return (article);
