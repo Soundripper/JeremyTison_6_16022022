@@ -290,9 +290,7 @@ a{
     .contact_button{
         margin : 20px;
     }
-    .photograph-gallery{
-        margin : 0px;
-    }
+    
     .imageCard img, .imageCard video {
         width : 100%;
         height : 100%;
@@ -305,7 +303,9 @@ a{
         flex-wrap: wrap;
         justify-content: space-around;
         padding : 0;
+        margin : 0px;
         margin-top : 20px;
+        margin-bottom :60px;
     }
     .photographer_section {
         display: flex;

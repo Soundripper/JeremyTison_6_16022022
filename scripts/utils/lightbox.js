@@ -48,8 +48,11 @@ function refreshLBox(indexCurrent){
         videoToDisplay.style.display = "none";
     }else if(myMediasArray[indexCurrent].video){
         videoToDisplay.style.display = "block";
-        videoToDisplay.src = "assets/photosTotal/" + myMediasArray[indexCurrent].video;
+        // videoToDisplay.src = "assets/photosTotal/" + myMediasArray[indexCurrent].video;
+        videoToDisplay.setAttribute("src", `assets/photosTotal/${myMediasArray[indexCurrent].video}#t=0.1`);
         videoToDisplay.setAttribute("aria-label", myMediasArray[indexCurrent].title);
+        videoToDisplay.setAttribute('webkit-playsinline', 'webkit-playsinline');
+        videoToDisplay.setAttribute('type', 'video/mp4');
         imageToDisplay.style.display = "none";
     }    
     textToDisplay.textContent = myMediasArray[indexCurrent].title;
