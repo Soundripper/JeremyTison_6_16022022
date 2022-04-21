@@ -25,6 +25,7 @@ function mediaFactory(media){
         const videoDiv = document.createElement('source');
         videoDiv.setAttribute("src", `assets/photosTotal/${video}#t=0.001`);
         videoDiv.setAttribute("type", "video/mp4");
+        videoDiv.setAttribute("preload", "metadata");
         imageCardButton.appendChild(imageDiv);
         imageDiv.appendChild(videoDiv);
         videoDiv.setAttribute("aria-label", title);
