@@ -24,7 +24,7 @@ function mediaFactory(media){
         imageDiv.setAttribute("aria-label", title);
         imageDiv.setAttribute("aria-describedby", "versGalerie");
         imageDiv.classList.add("imageThumb");
-        imageDiv.setAttribute("src", `assets/photosTotal/${video}#t=0.001`);
+        imageDiv.setAttribute("src", `assets/photosTotal/${video}#t=0.1`);
         imageDiv.setAttribute('webkit-playsinline', 'webkit-playsinline');
         imageDiv.setAttribute('type', 'video/mp4');
         // imageDiv.setAttribute("controls", "true");
