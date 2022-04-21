@@ -22,7 +22,7 @@ function mediaFactory(media){
     }else if(media.hasOwnProperty("video")){
         const imageDiv = document.createElement('video');
         imageDiv.classList.add("imageThumb");
-        imageDiv.setAttribute("src", `assets/photosTotal/${video}`);
+        imageDiv.setAttribute("src", `assets/photosTotal/${video}#t=0.001`);
         imageCardButton.appendChild(imageDiv);
         imageDiv.setAttribute("aria-label", title);
         imageDiv.setAttribute("aria-describedby", "versGalerie");
