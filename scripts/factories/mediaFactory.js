@@ -21,14 +21,16 @@ function mediaFactory(media){
         imageDiv.setAttribute("aria-describedby", "versGalerie");
     }else if(media.hasOwnProperty("video")){
         const imageDiv = document.createElement('video');
+        imageDiv.setAttribute("aria-label", title);
+        imageDiv.setAttribute("aria-describedby", "versGalerie");
         imageDiv.classList.add("imageThumb");
         imageDiv.setAttribute("src", `assets/photosTotal/${video}#t=0.001`);
         imageDiv.setAttribute('webkit-playsinline', 'webkit-playsinline');
-        imageDiv.setAttribute("controls", "true");
+        imageDiv.setAttribute('type', 'video/mp4');
+        // imageDiv.setAttribute("controls", "true");
         imageDiv.setAttribute("muted", "true");
         imageCardButton.appendChild(imageDiv);
-        imageDiv.setAttribute("aria-label", title);
-        imageDiv.setAttribute("aria-describedby", "versGalerie");
+        
     }
     
     const imageInfos = document.createElement('div');
