@@ -43,6 +43,7 @@ function mediaFactory(media){
     const imageLikes = document.createElement('button');
     imageLikes.className="imageLikes";
     imageLikes.innerHTML = likes + '<i class="fa-solid fa-heart heart"></i>';
+    imageLikes.setAttribute("aria-label", `cœurs`);
     // const totalLikesDivAdd = document.querySelector(".totalLikes");
     imageLikes.addEventListener("click", function adder(){
         imageLikes.innerHTML = (likes + 1) + '<i class="fa-solid fa-heart heart"></i>';

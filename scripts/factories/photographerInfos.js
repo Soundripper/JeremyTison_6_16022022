@@ -19,20 +19,20 @@ function photographerDataFactory(data) {
     nameDiv.textContent = name;
     description.appendChild(nameDiv);
     nameDiv.setAttribute("aria-label", name);
-    nameDiv.setAttribute("tabindex", 1);
+    nameDiv.setAttribute("tabindex", 0);
 
     const location = document.createElement('h4')
     location.textContent = city + ", "+ country;
     description.appendChild(location);
     location.setAttribute("aria-label", city + country);
-    location.setAttribute("tabindex", 1);
+    location.setAttribute("tabindex", 0);
 
     const taglineDiv = document.createElement('h4');
     taglineDiv.className="h4tag";
     taglineDiv.textContent = tagline;
     description.appendChild(taglineDiv);
     taglineDiv.setAttribute("aria-label", tagline);
-    taglineDiv.setAttribute("tabindex", 1);
+    taglineDiv.setAttribute("tabindex", 0);
 
     // Image
     const portraitDiv = document.createElement('img')
