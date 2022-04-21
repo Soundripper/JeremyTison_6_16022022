@@ -23,6 +23,7 @@ function mediaFactory(media){
         const imageDiv = document.createElement('video');
         imageDiv.classList.add("imageThumb");
         imageDiv.setAttribute("src", `assets/photosTotal/${video}#t=0.001`);
+        imageDiv.setAttribute('webkit-playsinline', 'webkit-playsinline');
         imageDiv.setAttribute("controls", "true");
         imageDiv.setAttribute("muted", "true");
         imageCardButton.appendChild(imageDiv);
