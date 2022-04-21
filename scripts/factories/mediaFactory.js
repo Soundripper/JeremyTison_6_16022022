@@ -22,10 +22,10 @@ function mediaFactory(media){
     }else if(media.hasOwnProperty("video")){
         const imageDiv = document.createElement('video');
         imageDiv.classList.add("imageThumb");
+        imageDiv.setAttribute("preload", "metadata");
         const videoDiv = document.createElement('source');
         videoDiv.setAttribute("src", `assets/photosTotal/${video}#t=0.001`);
         videoDiv.setAttribute("type", "video/mp4");
-        videoDiv.setAttribute("preload", "metadata");
         imageCardButton.appendChild(imageDiv);
         imageDiv.appendChild(videoDiv);
         videoDiv.setAttribute("aria-label", title);
