@@ -1,4 +1,4 @@
-/* photographer-header datas factory */
+/* photographer-header datas factory price and totalLikes */
 
 // let contactName = null;
 
