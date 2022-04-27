@@ -6,11 +6,12 @@ const photographerId = params.get('id');
 const getPhotographerData = async () => {
     const response = await fetch('data/photographers.json');
     const photographersData = await response.json();
-    const photographerData = photographersData.photographers.filter((x) => x.id == photographerId)[0];
-    const photographerMedias = photographersData.media.filter((x) => x.photographerId == photographerId);
+    const photographerData = photographersData.photographers.filter((x) => x.id === parseInt(photographerId, 10))[0];
+    const photographerMedias = photographersData.media.filter((x) => x.photographerId === parseInt(photographerId, 10));
     return { photographerData, photographerMedias };
 };
 
+// photographerDataFactory dans photographerInfos
 async function init() {
     const { photographerData } = await getPhotographerData();
     photographerDataFactory(photographerData);

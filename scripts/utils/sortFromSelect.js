@@ -22,3 +22,6 @@ function myDropdownFunction() {
         initMedias();
       }
 };
+
+const dropDown = document.querySelector('.dropbtn');
+dropDown.addEventListener('click', myDropdownFunction);

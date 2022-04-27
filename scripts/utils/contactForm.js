@@ -47,3 +47,9 @@ const submitClick = () => {
     console.log(`Message : ${formMessage.value}`);
     closeModal();
 };
+
+const submitButton = document.querySelector('.submit_button');
+submitButton.addEventListener('click', submitClick);
+
+const contactbutton = document.querySelector('.contact_button');
+contactbutton.addEventListener('click', displayModal);

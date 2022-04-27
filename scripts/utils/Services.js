@@ -22,6 +22,7 @@ class Sorter {
                 break;
             default:
         }
+        return 0;
     });
 }
 
@@ -41,7 +42,7 @@ class LikeService{
     renderValue = () => {
         this.totalLikesDiv.innerHTML = `${this.totalLikes} <i class="fa-solid fa-heart heart"></i>`;
     };
-
+    
     imageLikesEventClick() {
         let { totalLikes } = this;
 
