@@ -32,13 +32,6 @@ function displayLBox(index) {
     indexCurrent = index;
     refreshLBox(indexCurrent);
 
-    // lightbox.setAttribute('aria-disabled', 'false');
-    // lightbox.setAttribute('aria-modal', 'true');
-    // lightbox.setAttribute('aria-hidden', 'false');
-    // mainWrapper.setAttribute('aria-hidden', 'true');
-    // mainWrapper.setAttribute('aria-disabled', 'true');
-    // header.setAttribute('aria-hidden', 'true');
-    // header.setAttribute('aria-disabled', 'true');
     body.classList.add('no-scroll');
     document.querySelector('.lightbox__close').focus();
 }
@@ -48,13 +41,6 @@ function closeLBox() {
     lightbox.style.display = 'none';
     index = null;
 
-    // lightbox.setAttribute('aria-modal', 'false');
-    // mainWrapper.setAttribute('aria-hidden', 'false');
-    // mainWrapper.setAttribute('aria-disabled', 'false');
-    // header.setAttribute('aria-hidden', 'false');
-    // header.setAttribute('aria-disabled', 'false');
-    // lightbox.setAttribute('aria-hidden', 'true');
-    // lightbox.setAttribute('aria-disabled', 'true');
     body.classList.remove('no-scroll');
     document.querySelector('a').focus();
 }
@@ -62,10 +48,8 @@ function closeLBox() {
 function nextLBox(){
     if (indexCurrent >= myMediasArray.length - 1){
         indexCurrent = 0;
-        // console.log(indexCurrent);
     } else {
         indexCurrent += 1;
-        // console.log(indexCurrent);
     }
     refreshLBox(indexCurrent);
 }
@@ -73,10 +57,8 @@ function nextLBox(){
 function prevLBox(){
     if (indexCurrent <= 0) {
         indexCurrent = myMediasArray.length - 1;
-        // console.log(indexCurrent);
     } else {
         indexCurrent -= 1;
-        // console.log(indexCurrent);
     }
     refreshLBox(indexCurrent);
 }

@@ -18,36 +18,28 @@ async function init() {
 }
 
 async function initMedias() {
-    // totalLikes = 0;
     document.querySelector('.photograph-gallery').innerHTML = '';
 
     const { photographerMedias } = await getPhotographerData();
 
     if (sortParameter === 'Titre'){
         Sorter.sortMedias(photographerMedias, 'title', 'asc');
-        // photographerMedias.sort((a,b) => (a.title > b.title) ? 1 : ((a.title < b.title) ? -1 : 0));
     }
     if (sortParameter === 'Popularité'){
         Sorter.sortMedias(photographerMedias, 'likes', 'desc');
-        // photographerMedias.sort((a,b) => (a.likes > b.likes) ? -1 : ((a.likes < b.likes) ? 1 : 0));
     }
     if (sortParameter === 'Date'){
         Sorter.sortMedias(photographerMedias, 'date', 'asc');
-        // photographerMedias.sort((a,b) => (a.date > b.date) ? 1 : ((a.date < b.date) ? -1 : 0));
     }
     myMediasArray = [];
-    // console.log(photographerMedias);
     photographerMedias.forEach((media) => {
         mediaFactory(media);
         myMediasArray.push(media);
-        // totalLikes += media.likes;
     });
 
     const likeService = new LikeService();
     likeService.initLikes(photographerMedias);
     likeService.imageLikesEventClick();
-    // totalLikesDiv = document.querySelector(".totalLikes");
-    // totalLikesDiv.innerHTML = totalLikes + " " + '<i class="fa-solid fa-heart heart"></i>';
 }
 
 init();
